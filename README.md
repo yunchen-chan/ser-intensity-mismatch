@@ -4,6 +4,10 @@ An independent speech emotion recognition (SER) project investigating how a mism
 
 The main experiment uses RAVDESS speech recordings and an RBF-kernel support vector machine (SVM). Audio is represented by 31 handcrafted acoustic features: duration, energy statistics, pitch statistics, and 13 MFCC mean/standard-deviation pairs.
 
+## Project Materials
+
+- [Full Project Report](report/SER_Project_Report.pdf)
+- [Public Analysis Notebook](notebooks/SER_Three_Corpus_Baseline_Public.ipynb)
 ## Research questions
 
 1. How much does SER performance change when training and testing intensities match or mismatch?
