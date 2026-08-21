@@ -1,10 +1,5 @@
 # Notebooks
 
-Export the original Google Colab notebook as an `.ipynb` file and place it in this folder.
+`SER_Three_Corpus_Baseline_Public.ipynb` contains the cleaned public workflow for the speaker-independent three-corpus baseline using RAVDESS, EMO-DB, and CREMA-D.
 
-In Colab, use:
-
-`File → Download → Download .ipynb`
-
-Before publishing, remove any private Google Drive paths, temporary upload cells, and volunteer audio filenames that should not be public.
-
+Raw audio and full derived feature tables are not included. To rerun the evaluation, obtain the corpora from their official sources and configure the local data path described in the notebook.
