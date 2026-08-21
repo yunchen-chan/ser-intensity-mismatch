@@ -111,10 +111,9 @@ python scripts/inspect_artifacts.py
 - Most experiments use one classifier family; future work should compare additional models.
 - Cross-corpus differences are confounded by language, recording setup, acting style, and speaker composition.
 
+## Development Note
 
-## AI Assistance Disclosure
-
-The Python implementation was developed with AI assistance. I defined the research focus, organized and ran the experiments, reviewed the outputs, and interpreted the results.
+The Python implementation was developed with AI assistance. I defined the research question, organized and ran the experiments, reviewed the outputs, and interpreted the results.
 
 ## Author
 
