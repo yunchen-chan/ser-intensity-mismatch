@@ -64,7 +64,6 @@ These are **within-corpus descriptive comparisons**, not evidence that one corpu
 ```text
 .
 ├── README.md
-├── AI_ASSISTANCE.md
 ├── requirements.txt
 ├── data/
 │   ├── README.md
@@ -74,7 +73,8 @@ These are **within-corpus descriptive comparisons**, not evidence that one corpu
 │   ├── feature_names.json
 │   └── ser_fusion_svm_model.joblib
 ├── notebooks/
-│   └── README.md
+│   ├── README.md
+│   └── SER_Three_Corpus_Baseline_Public.ipynb
 ├── report/
 │   └── SER_Project_Report.pdf
 ├── results/
@@ -94,8 +94,7 @@ Dataset sources and licensing information are listed in [data/README.md](data/RE
 
 ## Reproducibility status
 
-The repository currently contains the report, numerical summaries, figures, a trained RAVDESS fusion model, its ordered feature list, and a sanitized feature sample. The original Colab notebook should be exported as `.ipynb` and added to `notebooks/` before treating this as a fully reproducible release.
-
+The repository contains the final project report, numerical summaries, figures, a trained RAVDESS fusion model, its ordered feature list, a sanitized feature sample, and a cleaned public analysis notebook. Raw corpus audio and full derived feature tables are not redistributed, so rerunning the complete workflow requires users to obtain the datasets and configure their own data paths.
 To inspect the included artifacts:
 
 ```bash
