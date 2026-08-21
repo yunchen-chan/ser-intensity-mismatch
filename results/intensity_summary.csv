@@ -1,0 +1,8 @@
+Condition,Training_Intensity,Testing_Intensity,Fusion_Macro_F1_Percent
+Normal_to_Normal,Normal,Normal,77.77
+Normal_to_Strong,Normal,Strong,45.51
+Strong_to_Strong,Strong,Strong,80.98
+Strong_to_Normal,Strong,Normal,39.12
+Mixed_to_Normal,Mixed,Normal,72.60
+Mixed_to_Strong,Mixed,Strong,73.87
+
