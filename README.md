@@ -7,7 +7,9 @@ The main experiment uses RAVDESS speech recordings and an RBF-kernel support vec
 ## Project Materials
 
 - [Full Project Report](report/SER_Project_Report.pdf)
-- [Public Analysis Notebook](notebooks/SER_Three_Corpus_Baseline_Public.ipynb)
+- [Core Intensity-Mismatch Notebook](notebooks/SER_Intensity_Mismatch_Public.ipynb)
+- [Three-Corpus Extension Notebook](notebooks/SER_Three_Corpus_Baseline_Public.ipynb)
+  
 ## Research questions
 
 1. How much does SER performance change when training and testing intensities match or mismatch?
