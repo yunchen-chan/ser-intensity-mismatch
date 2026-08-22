@@ -43,6 +43,8 @@ The main experiment uses RAVDESS speech recordings and an RBF-kernel support vec
 
 Matched-intensity conditions reached approximately **78–81% Macro F1**, whereas mismatched conditions fell to approximately **39–46%**. The effect was directional: Strong Happy speech was often predicted as Angry, while Normal Angry speech was often predicted as Happy or Sad after training only on Strong expressions. Mixed-intensity training recovered much of the lost performance.
 
+These values are the **original reported run** archived in the final report and `results/intensity_summary.csv`. The public core notebook also performs a fixed, version-independent rerun using an explicit actor partition. Its scores differ slightly because the original run's exact actor-fold assignment was not archived; the notebook displays both sets side by side and does not present the rerun as an exact numerical reproduction.
+
 ### 2. Acoustic interpretation
 
 Moving from Normal to Strong expression changed pitch, energy, duration, and multiple MFCC statistics. These shifts support an interpretation of intensity mismatch as a feature-distribution problem: the classifier encounters acoustic combinations during testing that were not sufficiently represented during training.
@@ -70,9 +72,11 @@ These are **within-corpus descriptive comparisons**, not evidence that one corpu
 ```text
 .
 ├── README.md
+├── LICENSE
 ├── requirements.txt
 ├── data/
 │   ├── README.md
+│   ├── ravdess_intensity_features.csv
 │   └── ser_features_sample.csv
 ├── models/
 │   ├── README.md
@@ -80,6 +84,7 @@ These are **within-corpus descriptive comparisons**, not evidence that one corpu
 │   └── ser_fusion_svm_model.joblib
 ├── notebooks/
 │   ├── README.md
+│   ├── SER_Intensity_Mismatch_Public.ipynb
 │   └── SER_Three_Corpus_Baseline_Public.ipynb
 ├── report/
 │   └── SER_Project_Report.pdf
@@ -94,13 +99,16 @@ These are **within-corpus descriptive comparisons**, not evidence that one corpu
 
 ## Data and privacy
 
-Raw corpus audio is not redistributed in this repository. Volunteer recordings are also excluded to protect participant privacy. The small CSV in `data/` is a path-sanitized sample of extracted RAVDESS features for demonstrating the table format.
+Raw corpus audio is not redistributed in this repository. Volunteer recordings are also excluded to protect participant privacy. The repository includes a path-sanitized RAVDESS intensity feature table for the public core-notebook rerun and a 20-row sample documenting the broader feature-table schema. Three-corpus derived feature tables are not redistributed.
 
 Dataset sources and licensing information are listed in [data/README.md](data/README.md).
 
 ## Reproducibility status
 
-The repository contains the final project report, numerical summaries, figures, a trained RAVDESS fusion model, its ordered feature list, a sanitized feature sample, and a cleaned public analysis notebook. Raw corpus audio and full derived feature tables are not redistributed, so rerunning the complete workflow requires users to obtain the datasets and configure their own data paths.
+The repository contains the final report, archived numerical summaries, figures, a trained RAVDESS fusion model, its ordered feature list, two cleaned public notebooks, and the sanitized 576-row RAVDESS intensity feature table required by the core rerun. The core intensity notebook runs directly from the included table. Rebuilding features from audio or rerunning the complete three-corpus workflow requires users to obtain the source datasets and configure their own data paths.
+
+The core notebook uses explicit test-actor folds so the public split does not change across scikit-learn versions. It also labels the archived report values separately from the fixed public rerun.
+
 To inspect the included artifacts:
 
 ```bash
@@ -119,6 +127,10 @@ python scripts/inspect_artifacts.py
 ## Development Note
 
 The Python implementation was developed with AI assistance. I defined the research question, organized and ran the experiments, reviewed the outputs, and interpreted the results.
+
+## License
+
+Original source code and notebooks in this repository are released under the [MIT License](LICENSE). This license does **not** relicense source datasets or dataset-derived materials. The feature tables, trained model, figures, and report remain subject to the terms and citation requirements of their source datasets; see [data/README.md](data/README.md).
 
 ## Author
 
