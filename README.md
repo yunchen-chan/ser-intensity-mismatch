@@ -43,7 +43,7 @@ The main experiment uses RAVDESS speech recordings and an RBF-kernel support vec
 
 Matched-intensity conditions reached approximately **78–81% Macro F1**, whereas mismatched conditions fell to approximately **39–46%**. The effect was directional: Strong Happy speech was often predicted as Angry, while Normal Angry speech was often predicted as Happy or Sad after training only on Strong expressions. Mixed-intensity training recovered much of the lost performance.
 
-These values are the **original reported run** archived in the final report and `results/intensity_summary.csv`. The public core notebook also performs a fixed-partition public rerun using an explicit actor partition.Its scores differ slightly because the original run's exact actor-fold assignment was not archived; the notebook displays both sets side by side and does not present the rerun as an exact numerical reproduction.
+These values are the **original reported run** archived in the final report and `results/intensity_summary.csv`. The public core notebook also performs a fixed-partition public rerun using an explicit actor partition. Its scores differ slightly because the original run's exact actor-fold assignment was not archived; the notebook displays both sets side by side and does not present the rerun as an exact numerical reproduction.
 
 ### 2. Acoustic interpretation
 
